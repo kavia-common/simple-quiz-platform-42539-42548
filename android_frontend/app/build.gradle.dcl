@@ -20,10 +20,12 @@ androidApplication {
         implementation("androidx.navigation:navigation-compose:2.8.3")
     }
 
-    // Debug-only dependencies in declarative DSL
-    debug {
-        dependencies {
-            implementation("androidx.compose.ui:ui-tooling")
+    // Debug-only dependencies using declarative DSL
+    buildTypes {
+        debug {
+            dependencies {
+                implementation("androidx.compose.ui:ui-tooling")
+            }
         }
     }
 }
